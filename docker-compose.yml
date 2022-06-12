@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./src:/src:cached
+      - node_modules:/src/node_modules
+    working_dir: "/src"
+    ports:
+      - "3000:3000"
+    tty: true
+    environment:
+    - HOST=0.0.0.0
+    - port=3000
+    - CHOKIDAR_USEPOLLING=true
+
+  db:
+    image: postgres:14.3-alpine
+    container_name: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=passw0rd
+
+volumes:
+  node_modules:
+  db-store:
