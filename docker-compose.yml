@@ -14,6 +14,7 @@ services:
     - HOST=0.0.0.0
     - port=3000
     - CHOKIDAR_USEPOLLING=true
+    command: yarn dev
 
   db:
     image: postgres:14.3-alpine
