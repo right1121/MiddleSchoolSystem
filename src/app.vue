@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data } = useFetch('/api/school_lunch')
+const { data } = useFetch('/api/school-lunch')
 </script>
 
 <template>
