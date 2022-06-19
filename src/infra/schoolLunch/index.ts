@@ -1,5 +1,5 @@
 import ISchoolLunchRepository from '~~/domain/schoolLunch/ISchoolLunchRepository'
-import { SchoolLunch } from '~~/domain/schoolLunch/schoolLunch'
+import { SchoolLunch } from '~~/domain/schoolLunch'
 
 const repository: ISchoolLunchRepository = {
   find() {

@@ -1,5 +1,5 @@
-import { list } from '~~/usecase/schoolLunch/schoolLunch'
-import schoolLunchRepository from '~~/infra/schoolLunch/schoolLunchRepository'
+import { list } from '~~/usecase/schoolLunch'
+import schoolLunchRepository from '~~/infra/schoolLunch'
 
 export default defineEventHandler(() => {
   return list(schoolLunchRepository)
