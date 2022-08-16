@@ -1,4 +1,4 @@
-import ISchoolLunchRepository from '~~/domain/SchoolLunch/ISchoolLunchRepository'
+import ISchoolLunchRepository from '~~/domain/schoolLunch/ISchoolLunchRepository'
 
 const list = (
   schoolLunchRepository: ISchoolLunchRepository
