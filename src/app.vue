@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const { data } = useFetch('/api/school-lunch')
+const { data } = await useFetch('/api/school-lunch')
 </script>
 
 <template>
   <div>
-    {{ data }}
+    <ul>
+      <li v-for="d in data">{{ d }}</li>
+    </ul>
     <NuxtWelcome />
   </div>
 </template>
