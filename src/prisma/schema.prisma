@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model lunch_cooking {
+  cooking_id    String    @id @db.Uuid
+  menu_id       String    @db.Uuid
+  cooking_name  String?   @db.VarChar(50)
+  staple_flg    Boolean?  @default(false)
+  main_dish_flg Boolean?  @default(false)
+  side_dish_flg Boolean?  @default(false)
+  created_at    DateTime  @db.Date
+  created_user  String    @db.VarChar(50)
+  updated_at    DateTime? @db.Date
+  updated_user  String?   @db.VarChar(50)
+}
+
+model lunch_menu {
+  menu_id         String    @id @db.Uuid
+  school_lunch_id String    @db.Uuid
+  day             DateTime  @unique @db.Date
+  created_at      DateTime  @db.Date
+  created_user    String    @db.VarChar(50)
+  updated_at      DateTime? @db.Date
+  updated_user    String?   @db.VarChar(50)
+}
+
+model school_lunch {
+  school_lunch_id String    @id @db.Uuid
+  date            DateTime  @db.Date
+  created_at      DateTime  @db.Date
+  created_user    String    @db.VarChar(50)
+  updated_at      DateTime? @db.Date
+  updated_user    String?   @db.VarChar(50)
+}
