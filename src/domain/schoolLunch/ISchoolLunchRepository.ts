@@ -1,5 +1,5 @@
 import { SchoolLunch } from '.'
 
 export default interface ISchoolLunchRepository {
-  find(): SchoolLunch
+  find(): Promise<SchoolLunch>
 }
