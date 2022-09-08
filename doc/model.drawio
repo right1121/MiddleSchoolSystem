@@ -1,50 +1,173 @@
 <mxfile host="65bd71144e">
     <diagram id="VcuDrTNgzmGo0v2y2pSo" name="ページ1">
-        <mxGraphModel dx="1299" dy="941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="1162" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Table" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;pointerEvents=1;" vertex="1" parent="1">
-                    <mxGeometry x="120" y="120" width="200" height="160" as="geometry"/>
+                <mxCell id="83" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="80" width="780" height="480" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=1;fillColor=none;top=0;left=0;bottom=1;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
-                    <mxGeometry y="30" width="200" height="30" as="geometry"/>
+                <mxCell id="12" value="給食" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="160" width="140" height="300" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" vertex="1" parent="3">
-                    <mxGeometry width="44" height="30" as="geometry">
-                        <mxRectangle width="44" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="13" value="給食ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="Value 1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;pointerEvents=1;" vertex="1" parent="3">
-                    <mxGeometry x="44" width="156" height="30" as="geometry">
-                        <mxRectangle width="156" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="21" value="日付(年月日)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=1;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
-                    <mxGeometry y="60" width="200" height="30" as="geometry"/>
+                <mxCell id="19" value="主菜" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" vertex="1" parent="6">
-                    <mxGeometry width="44" height="30" as="geometry">
-                        <mxRectangle width="44" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="14" value="副菜" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="120" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="Value 2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;pointerEvents=1;" vertex="1" parent="6">
-                    <mxGeometry x="44" width="156" height="30" as="geometry">
-                        <mxRectangle width="156" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="20" value="汁物" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="150" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=1;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="2">
-                    <mxGeometry y="90" width="200" height="30" as="geometry"/>
+                <mxCell id="16" value="主食" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="180" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;" vertex="1" parent="9">
-                    <mxGeometry width="44" height="30" as="geometry">
-                        <mxRectangle width="44" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="17" value="サラダ" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="210" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="Value 3" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;pointerEvents=1;" vertex="1" parent="9">
-                    <mxGeometry x="44" width="156" height="30" as="geometry">
-                        <mxRectangle width="156" height="30" as="alternateBounds"/>
-                    </mxGeometry>
+                <mxCell id="18" value="デザート" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="240" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="飲み物" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="12" vertex="1">
+                    <mxGeometry y="270" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="主食・主菜・副菜は必ずある&lt;br&gt;主食と主菜は混ざる&lt;br&gt;主菜と副菜は混ざる&lt;br&gt;2つ以上は混ざらない&lt;br&gt;飲み物は必ず一つ&lt;br&gt;副菜はひとつづつ" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="20" width="240" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="1 : n" style="edgeStyle=none;html=1;fontSize=12;" parent="1" source="24" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="給食" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="320" width="140" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="給食ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="23" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="日付(年月)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="23" vertex="1">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="1 : n" style="edgeStyle=none;html=1;fontSize=12;" parent="1" source="40" target="37" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="献立" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="320" width="140" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="献立ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="33" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="給食ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="33" vertex="1">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="日" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="33" vertex="1">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="料理" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="320" width="140" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="料理ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="献立ID" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="食事名" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="主食" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="120" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="主菜" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="150" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="副菜" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="36" vertex="1">
+                    <mxGeometry y="180" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="主食と主菜は混ざる&lt;br&gt;主菜と副菜は混ざる&lt;br&gt;主食と副菜は混ざらない&lt;br&gt;(2つ以上は混ざらない)" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="200" width="240" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="主食・主菜・副菜は必ずある&lt;br&gt;飲み物は必ず一つ&lt;br&gt;副菜は1～2つ" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="200" width="140" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1320" y="80" width="520" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="2022/06月" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="120" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="1日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="200" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="2日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="280" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="3日" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1360" y="360" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="献立を足す" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1680" y="200" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1880" y="120" width="400" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="食事名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="160" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="200" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="主食" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=default;labelPosition=right;" vertex="1" parent="1">
+                    <mxGeometry x="2160" y="160" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="主菜" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=default;labelPosition=right;" vertex="1" parent="1">
+                    <mxGeometry x="2160" y="200" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="副菜" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=default;labelPosition=right;" vertex="1" parent="1">
+                    <mxGeometry x="2160" y="240" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="食事を足す" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1975" y="320" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1980" y="640" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="主食を足す" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1440" y="280" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="主菜を足す" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1560" y="280" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="副菜を足す" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1680" y="280" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1880" y="760" width="400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="食事名" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="800" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="840" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="副菜も兼ねる" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=default;labelPosition=right;" vertex="1" parent="1">
+                    <mxGeometry x="1920" y="920" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="登録" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1980" y="960" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="カレーライス" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="1440" y="360" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="半年先まで登録可能&lt;br&gt;編集は過去すべてと半年先まで可能&lt;br&gt;確認画面は前月、当月、来月の献立が確認可能" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fontSize=9;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="200" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="給食" style="rounded=0;whiteSpace=wrap;html=1;fontColor=default;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="120" width="160" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
