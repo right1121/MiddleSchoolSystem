@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@prisma/client": "^4.1.1",
-    "nuxt": "3.0.0-rc.3",
+    "nuxt": "^3.0.0-rc.14",
     "pinia": "2.0.14",
     "prisma": "^4.1.1"
   },
