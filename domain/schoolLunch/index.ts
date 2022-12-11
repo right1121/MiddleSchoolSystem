@@ -7,14 +7,14 @@ export interface Input {
 export class SchoolLunch {
   id: SchoolLunchID
 
-  private constructor(id: SchoolLunchID) {
+  private constructor (id: SchoolLunchID) {
     this.id = id
   }
 
   /**
    * new
    */
-  public static new() {
+  public static new () {
     const id = SchoolLunchID.new()
     return new this(id)
   }
@@ -22,7 +22,7 @@ export class SchoolLunch {
   /**
    * create
    */
-  public static create(input: Input) {
+  public static create (input: Input) {
     const id = SchoolLunchID.create(input.id)
     return new this(id)
   }
