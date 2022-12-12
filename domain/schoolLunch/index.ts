@@ -1,4 +1,4 @@
-import { SchoolLunchID } from './SchoolLunchID'
+import { SchoolLunchID } from './schoolLunchID'
 
 export interface Input {
   id: string
