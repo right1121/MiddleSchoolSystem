@@ -49,14 +49,14 @@ export interface SchoolLunchDto {
  * 給食モデル
  */
 export class SchoolLunch {
-  /**給食ID */
+  /** 給食ID */
   schoolLunchId: SchoolLunchID
   /** 年月 */
   date: SchoolLunchDate
   /** 献立モデル */
   menus: Menu[]
 
-  private constructor(id: SchoolLunchID, date: SchoolLunchDate, menus: Menu[]) {
+  private constructor (id: SchoolLunchID, date: SchoolLunchDate, menus: Menu[]) {
     this.schoolLunchId = id
     this.date = date
     this.menus = menus
@@ -65,7 +65,7 @@ export class SchoolLunch {
   /**
    * new
    */
-  public static new(input: SchoolLunchInput) {
+  public static new (input: SchoolLunchInput) {
     const id = SchoolLunchID.new()
     const date = SchoolLunchDate.new(input.date)
     const menus = input.menus.map(menu => Menu.new(id, menu))
@@ -75,7 +75,7 @@ export class SchoolLunch {
   /**
    * DBなどのデータから再構築する
    */
-  public static reconstruct(input: SchoolLunchDto) {
+  public static reconstruct (input: SchoolLunchDto) {
     const id = SchoolLunchID.reconstruct(input.schoolLunchId)
     const date = SchoolLunchDate.reconstruct(input.date)
     const menus = input.menus.map(menu => Menu.reconstruct(menu))
@@ -87,16 +87,16 @@ export class SchoolLunch {
  * 献立モデル
  */
 class Menu {
-  /**献立ID */
+  /** 献立ID */
   menuId: MenuID
-  /**給食ID */
+  /** 給食ID */
   schoolLunchId: SchoolLunchID
-  /**日付(1~31日) */
+  /** 日付(1~31日) */
   day: MenuDay
   /** 料理モデル */
   cookingList: Cooking[]
 
-  private constructor(id: MenuID, schoolLunchId: SchoolLunchID, day: MenuDay, cookingList: Cooking[]) {
+  private constructor (id: MenuID, schoolLunchId: SchoolLunchID, day: MenuDay, cookingList: Cooking[]) {
     this.menuId = id
     this.schoolLunchId = schoolLunchId
     this.day = day
@@ -106,7 +106,7 @@ class Menu {
   /**
    * new
    */
-  public static new(schoolLunchId: SchoolLunchID, menuInput: MenuInput) {
+  public static new (schoolLunchId: SchoolLunchID, menuInput: MenuInput) {
     const id = MenuID.new()
     const day = MenuDay.new(menuInput.day)
     const cookingList = menuInput.cookingList.map(cooking => Cooking.new(id, cooking))
@@ -116,7 +116,7 @@ class Menu {
   /**
    * DBなどのデータから再構築する
    */
-  public static reconstruct(input: MenuDto) {
+  public static reconstruct (input: MenuDto) {
     const id = MenuID.reconstruct(input.menuId)
     const schoolLunchId = SchoolLunchID.reconstruct(input.schoolLunchId)
     const day = MenuDay.reconstruct(input.day)
@@ -140,10 +140,10 @@ class Cooking {
   /** カテゴリ */
   cookingCategory: CookingCategory
 
-  /**日付(1~31日) */
+  /** 日付(1~31日) */
   day: MenuDay
 
-  private constructor(
+  private constructor (
     id: CookingID,
     menuId: MenuID,
     cookingName: CookingName,
@@ -158,7 +158,7 @@ class Cooking {
   /**
    * new
    */
-  public static new(menuId: MenuID, cookingInput: CookingInput) {
+  public static new (menuId: MenuID, cookingInput: CookingInput) {
     const id = CookingID.new()
     const cookingName = CookingName.new(cookingInput.cookingName)
     const cookingCategory = CookingCategory.new(cookingInput.isStaple, cookingInput.isMainDish, cookingInput.isMainDish)
@@ -168,7 +168,7 @@ class Cooking {
   /**
    * DBなどのデータから再構築する
    */
-  public static reconstruct(input: CookingDto) {
+  public static reconstruct (input: CookingDto) {
     const id = CookingID.reconstruct(input.cookingId)
     const menuId = MenuID.reconstruct(input.menuId)
     const name = CookingName.reconstruct(input.cookingName)
