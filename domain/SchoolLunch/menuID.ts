@@ -1,6 +1,6 @@
 import uuid from '~~/tools/uuid'
 
-export class SchoolLunchID {
+export class MenuID {
   private _value: string
 
   get value() { return this._value }
@@ -17,7 +17,7 @@ export class SchoolLunchID {
   }
 
   /**
-   * DBなどのデータから再構築する
+   * new
    */
   public static reconstruct(id: string) {
     return new this(id)
