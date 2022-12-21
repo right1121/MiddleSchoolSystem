@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
-import ISchoolLunchRepository from '~~/domain/schoolLunch/ISchoolLunchRepository'
-import { SchoolLunch } from '~~/domain/schoolLunch'
+import ISchoolLunchRepository from '~~/server/domain/schoolLunch/ISchoolLunchRepository'
+import { SchoolLunch } from '~~/server/domain/schoolLunch'
 
 const prisma = new PrismaClient()
 
