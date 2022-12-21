@@ -5,10 +5,12 @@ import { SchoolLunch } from '~~/server/domain/schoolLunch'
 const prisma = new PrismaClient()
 
 const repository: ISchoolLunchRepository = {
-  async find () {
+  async list () {
     const schoolLunchs = await prisma.school_lunch.findMany()
-    return schoolLunchs.map(sl => SchoolLunch.create({
-      id: sl.school_lunch_id
+    return schoolLunchs.map(sl => SchoolLunch.reconstruct({
+      schoolLunchId: sl.school_lunch_id,
+      date: sl.date,
+      menus: []
     }))
   }
 }

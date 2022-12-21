@@ -3,7 +3,7 @@ import ISchoolLunchRepository from '~~/server/domain/schoolLunch/ISchoolLunchRep
 const list = (
   schoolLunchRepository: ISchoolLunchRepository
 ) => {
-  return schoolLunchRepository.find()
+  return schoolLunchRepository.list()
 }
 
 export { list }
