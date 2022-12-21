@@ -1,9 +1,9 @@
-import ISchoolLunchRepository from '~~/domain/schoolLunch/ISchoolLunchRepository'
+import ISchoolLunchRepository from '~~/server/domain/schoolLunch/ISchoolLunchRepository'
 
 const list = (
   schoolLunchRepository: ISchoolLunchRepository
 ) => {
-  return schoolLunchRepository.find()
+  return schoolLunchRepository.list()
 }
 
 export { list }
