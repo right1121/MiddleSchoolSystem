@@ -1,3 +1,5 @@
+import { isAvailableByName } from '~~/utils/validator'
+
 export class CookingName {
   private _value: string
   #maxLength = 50
@@ -12,6 +14,10 @@ export class CookingName {
   #validate () {
     if (this.value.length > this.#maxLength) {
       throw new Error(`${this.#maxLength}文字以下にしてください。 ${JSON.stringify(this)}`)
+    }
+    const [result, errors] = isAvailableByName(this._value)
+    if (!result) {
+      throw new Error(`以下の文字は使用できません。 ${errors.join('')} ${JSON.stringify(this)}`)
     }
   }
 

@@ -3,9 +3,9 @@ import { CookingName } from './CookingName'
 
 describe('CookingName 生成', () => {
   describe.each([
-    { value: '12345678901234567890123456789012345678901234567890' },
-    { value: '1' },
-    { value: 'あ' }
+    { value: 'あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえお' },
+    { value: 'あ' },
+    { value: 'ア' }
   ])('正常系', ({ value }) => {
     test(`new value: ${value}, `, () => {
       const category = CookingName.new(value)
@@ -22,7 +22,9 @@ describe('CookingName 生成', () => {
   })
 
   describe.each([
-    { value: '123456789012345678901234567890123456789012345678901', message: '50文字以下にしてください。' }
+    { value: 'あいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあいうえおあ', message: '50文字以下にしてください。' },
+    { value: '123456', message: '以下の文字は使用できません。 123456' },
+    { value: 'あいう123えお@@', message: '以下の文字は使用できません。 123@@' }
   ])('異常系', ({ value, message }) => {
     test(`new value: ${value}, `, () => {
       expect(() => CookingName.new(value)).toThrowError(`${message} {"_value":"${value}"}`)
