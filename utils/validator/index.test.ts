@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { isHiragana, isKatakana, isKanji, isNihongo } from './index'
+import { isHiragana, isKatakana, isKanji, isNihongo, isAvailableByName, isAvailableString } from './index'
 
 describe('ひらがなチェック', () => {
   describe.each([
@@ -9,7 +9,7 @@ describe('ひらがなチェック', () => {
     test(`value: ${value}, `, () => {
       const [result, errors] = isHiragana(value)
       expect(result).toBeTruthy()
-      expect(errors).toBeNull()
+      expect(errors).toHaveLength(0)
     })
   })
 
@@ -35,10 +35,10 @@ describe('カタカナチェック', () => {
     { value: 'アイウエオ' },
     { value: 'カーブ' }
   ])('正常系', ({ value }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isKatakana(value)
       expect(result).toBeTruthy()
-      expect(errors).toBeNull()
+      expect(errors).toHaveLength(0)
     })
   })
 
@@ -50,7 +50,7 @@ describe('カタカナチェック', () => {
     { value: 'あ亜ア', errorStrs: ['あ亜'] },
     { value: '亜アあ', errorStrs: ['亜', 'あ'] }
   ])('異常系', ({ value, errorStrs }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isKatakana(value)
       expect(result).toBeFalsy()
       expect(errors).toStrictEqual(errorStrs)
@@ -63,10 +63,10 @@ describe('漢字チェック', () => {
     { value: '亜' },
     { value: '亜位宇江尾' }
   ])('正常系', ({ value }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isKanji(value)
       expect(result).toBeTruthy()
-      expect(errors).toBeNull()
+      expect(errors).toHaveLength(0)
     })
   })
 
@@ -78,7 +78,7 @@ describe('漢字チェック', () => {
     { value: 'あ亜ア', errorStrs: ['あ', 'ア'] },
     { value: '亜アあ', errorStrs: ['アあ'] }
   ])('異常系', ({ value, errorStrs }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isKanji(value)
       expect(result).toBeFalsy()
       expect(errors).toStrictEqual(errorStrs)
@@ -93,10 +93,10 @@ describe('日本語チェック', () => {
     { value: '亜' },
     { value: 'あ亜ア' }
   ])('正常系', ({ value }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isNihongo(value)
       expect(result).toBeTruthy()
-      expect(errors).toBeNull()
+      expect(errors).toHaveLength(0)
     })
   })
 
@@ -107,10 +107,69 @@ describe('日本語チェック', () => {
     { value: 'ABC亜位宇', errorStrs: ['ABC'] },
     { value: '亜A位B宇C', errorStrs: ['A', 'B', 'C'] }
   ])('異常系', ({ value, errorStrs }) => {
-    test(`new value: ${value}, `, () => {
+    test(`value: ${value}, `, () => {
       const [result, errors] = isNihongo(value)
       expect(result).toBeFalsy()
       expect(errors).toStrictEqual(errorStrs)
+    })
+  })
+})
+
+describe('名前チェック', () => {
+  describe.each([
+    { value: 'あ' },
+    { value: 'ア' },
+    { value: '亜' },
+    { value: 'a' },
+    { value: 'あ亜アa' }
+  ])('正常系', ({ value }) => {
+    test(`value: ${value}, `, () => {
+      const [result, errors] = isAvailableByName(value)
+      expect(result).toBeTruthy()
+      expect(errors).toHaveLength(0)
+    })
+  })
+
+  describe.each([
+    { value: '1', errorStrs: ['1'] },
+    { value: '@', errorStrs: ['@'] },
+    { value: 'あ1い', errorStrs: ['1'] },
+    { value: 'ABC@亜位宇', errorStrs: ['@'] },
+    { value: '@亜A位B\\宇C', errorStrs: ['@', '\\'] }
+  ])('異常系', ({ value, errorStrs }) => {
+    test(`value: ${value}, `, () => {
+      const [result, errors] = isAvailableByName(value)
+      expect(result).toBeFalsy()
+      expect(errors).toStrictEqual(errorStrs)
+    })
+  })
+})
+
+describe('全文字チェック', () => {
+  describe.each([
+    { value: 'あ' },
+    { value: 'ア' },
+    { value: '亜' },
+    { value: '@' },
+    { value: '.' },
+    { value: 'a' },
+    { value: 'あ亜アa@' }
+  ])('正常系', ({ value }) => {
+    test(`value: ${value}, `, () => {
+      const [result, errors] = isAvailableString(value)
+      expect(result).toBeTruthy()
+      expect(errors).toHaveLength(0)
+    })
+  })
+
+  describe.each([
+    { value: ';', errorStrs: [';'] },
+    { value: '@亜§A位B\\Π宇C', errorStrs: ['§', 'Π'] }
+  ])('異常系', ({ value, errorStrs }) => {
+    test(`value: ${value}, `, () => {
+      const [result, errors] = isAvailableString(value)
+      expect(errors).toStrictEqual(errorStrs)
+      expect(result).toBeFalsy()
     })
   })
 })
