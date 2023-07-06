@@ -10,6 +10,7 @@ datasource db {
 model lunch_cooking {
   cooking_id    String    @id @db.Uuid
   menu_id       String    @db.Uuid
+  school_lunch  lunch_menu? @relation(fields: [menu_id], references: [menu_id])
   cooking_name  String?   @db.VarChar(50)
   staple_flg    Boolean?  @default(false)
   main_dish_flg Boolean?  @default(false)
@@ -23,7 +24,9 @@ model lunch_cooking {
 model lunch_menu {
   menu_id         String    @id @db.Uuid
   school_lunch_id String    @db.Uuid
+  school_lunch    school_lunch?   @relation(fields: [school_lunch_id], references: [school_lunch_id])
   day             DateTime  @unique @db.Date
+  cooking         lunch_cooking[]
   created_at      DateTime  @db.Date
   created_user    String    @db.VarChar(50)
   updated_at      DateTime? @db.Date
@@ -33,6 +36,7 @@ model lunch_menu {
 model school_lunch {
   school_lunch_id String    @id @db.Uuid
   date            DateTime  @db.Date
+  lunch_menu      lunch_menu[]
   created_at      DateTime  @db.Date
   created_user    String    @db.VarChar(50)
   updated_at      DateTime? @db.Date
