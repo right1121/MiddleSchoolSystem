@@ -26,5 +26,7 @@
     "node": "16.17.0",
     "yarn": "1.22.19"
   },
-  "dependencies": {}
+  "dependencies": {
+    "date-fns": "^2.29.3"
+  }
 }
